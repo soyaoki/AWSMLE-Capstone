@@ -106,7 +106,7 @@ The image samples are as follows. It was found that the image sizes were not sta
 ![](./sampleimage-testdata.png)
 
 ## Model Training
-We chose to use a pre-trained CNN, Resnet152, for transfor learning. This model is highly expressive with the maximum number of layers of Resnet available in [Pytorch](https://pytorch.org/hub/pytorch_vision_resnet/). [The study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3311007) have also shown that accuracy tends to be higher as the number of layers increases, so this model with the maximum number of layers was selected.
+We chose to use a pre-trained CNN, `Resnet152`, for transfor learning. This model is highly expressive with the maximum number of layers of Resnet available in [Pytorch](https://pytorch.org/hub/pytorch_vision_resnet/). [The study](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3311007) have also shown that accuracy tends to be higher as the number of layers increases, so this model with the maximum number of layers was selected.
 The Fully Connected layer was defined as follows
 ```
 nn.Sequential(nn.Linear(model.fc.in_features, 128), nn.ReLU(inplace=True), nn.Linear(128, 5))
